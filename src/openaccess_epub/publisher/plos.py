@@ -438,8 +438,8 @@ class PLoS(Publisher):
                         append_new_text(citation_div, suffix_text, join_str='')
                 #If this is not the last author to be added, add a ", "
                 #This is satisfied by being less than the 6th author, or less
-                #than the length of the author_list - 1
-                if author_index < 5 or author_index < len(author_list) -1:
+                #than the length of the authors - 1
+                if author_index < 5 and author_index < len(authors) -1:
                     append_new_text(citation_div, ', ', join_str='')
         #Add Publication Year to the citation
         #Find pub-date elements, use pub-type=collection, or else pub-type=ppub
